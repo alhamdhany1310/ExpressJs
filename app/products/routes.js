@@ -3,14 +3,35 @@ const multer = require('multer');
 const upload = multer({ dest: 'uploads' });
 const fs = require('fs');
 const path = require('path');
-router.get('/', (req, res) => {
-  const { page, total } = req.query;
-  res.send({
-    status: 'Berhasil',
-    pesan: 'Welcome to the jungle',
-    page,
-    total,
-  });
+const connection = require('../../config/mysql');
+
+router.get('/product', (req, res) => {
+  // const { page, total } = req.query;
+  // res.send({
+  //   status: 'Berhasil',
+  //   pesan: 'Welcome to the jungle',
+  //   page,
+  //   total,
+  // });
+  connection.connect();
+  connection.query(
+    {
+      sql: 'SELECT * FROM products',
+    },
+    (error, results) => {
+      if (error) {
+        res.send({
+          status: 'failed',
+          response: 'failed to fetch data',
+        });
+      } else {
+        res.send({
+          status: 'success',
+          response: results,
+        });
+      }
+    }
+  );
 });
 
 router.get('/product/:id', (req, res) => {
