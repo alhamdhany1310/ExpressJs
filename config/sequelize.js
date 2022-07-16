@@ -5,6 +5,13 @@ const sequelize = new Sequelize({
   // username: 'root',
   // password: '',
   // dialect: 'mysql',
+
+  // database: 'hilj2267_express',
+  // host: '110.136.219.91',
+  // username: 'hilj2267_dani',
+  // password: '123loginok!',
+  // dialect: 'mysql',
+
   database: 'dcpqo6ljgcmudv',
   host: 'ec2-54-152-28-9.compute-1.amazonaws.com',
   username: 'zlyjtchmmedelo',
