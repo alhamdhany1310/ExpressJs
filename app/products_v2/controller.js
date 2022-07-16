@@ -13,7 +13,7 @@ const isiData = async (req, res) => {
     fs.renameSync(image.path, target);
     try {
       await Product.sync();
-      const result = await Product.create({ users_id, name, price, stock, status, image_url: `http://localhost:3000/public/${image.originalname}` });
+      const result = await Product.create({ users_id, name, price, stock, status, image_url: `https://task-expressjs.herokuapp.com/public/${image.originalname}` });
       res.send(result);
     } catch (er) {
       res.send(er);
@@ -71,7 +71,7 @@ const update = async (req, res) => {
         price,
         stock,
         status,
-        image_url: `http://localhost:3000/public/${image.originalname}`,
+        image_url: `https://task-expressjs.herokuapp.com/public/${image.originalname}`,
       },
       {
         where: {
