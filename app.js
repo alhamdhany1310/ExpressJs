@@ -4,6 +4,7 @@ const path = require('path');
 const productsRouter = require('./app/products/routes');
 const productsRouterV2 = require('./app/products_v2/routes');
 const logger = require('morgan');
+// const port = process.env
 
 const indexRouter = require('./public/index');
 
@@ -22,4 +23,4 @@ app.use((req, res, next) => {
     pesan: 'Resource' + req.originalUrl + ' tidak di temukan',
   });
 });
-app.listen(3000, () => console.log('Server : http://localhost:3000'));
+// app.listen(3000, () => console.log('Server : http://localhost:3000'));
