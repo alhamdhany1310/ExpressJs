@@ -57,7 +57,7 @@ const detail = async (req, res) => {
 
 //   edit atau update data
 const update = async (req, res) => {
-  const { user_id, name, price, stock, status } = req.body;
+  const { usersId, name, price, stock, status } = req.body;
   const image = req.file;
   if (image) {
     const target = path.join(__dirname, '../../uploads', image.originalname);
@@ -66,12 +66,12 @@ const update = async (req, res) => {
   try {
     await Product.update(
       {
-        user_id,
+        usersId,
         name,
         price,
         stock,
         status,
-        image_url: `https://task-expressjs.herokuapp.com/public/${image.originalname}`,
+        imageUrl: `https://task-expressjs.herokuapp.com/public/${image.originalname}`,
       },
       {
         where: {
