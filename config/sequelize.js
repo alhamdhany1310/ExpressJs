@@ -5,17 +5,17 @@ const sequelize = new Sequelize({
   // username: 'root',
   // password: '',
   // dialect: 'mysql',
-
+  // ===========================
   // database: 'hilj2267_express',
   // host: '110.136.219.91',
   // username: 'hilj2267_dani',
   // password: '123loginok!',
   // dialect: 'mysql',
-
-  database: 'dcpqo6ljgcmudv',
-  host: 'ec2-54-152-28-9.compute-1.amazonaws.com',
-  username: 'zlyjtchmmedelo',
-  password: '392e05eb10d2fd5a67466d517597ac2817ad0555bdc0170d4df81c03297818f5',
+  // ==========================
+  database: 'dend401p5hkbp8',
+  host: 'ec2-52-205-61-230.compute-1.amazonaws.com',
+  username: 'ctkauakxjeetvz',
+  password: '6575e7855bdb2dbd88b4a69cbb5a543ecf7380774bd7cd0eda428aec7406b1be',
   dialect: 'postgres',
   dialectOptions: {
     ssl: {

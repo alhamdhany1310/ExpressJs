@@ -7,7 +7,7 @@ const Product = sequelize.define('Product', {
   //   autoIncrement: true,
   //   allowNull: false,
   // },
-  usersId: {
+  users_id: {
     type: DataTypes.INTEGER,
     allowNull: false,
   },
@@ -28,7 +28,7 @@ const Product = sequelize.define('Product', {
     defaultValue: false,
     allowNull: false,
   },
-  imageUrl: {
+  image_url: {
     type: DataTypes.TEXT,
   },
 });
