@@ -24,7 +24,7 @@ const isiData = async (req, res) => {
 //   menampilkan semua isi data
 const index = async (req, res) => {
   const { search } = req.query;
-  const result = await Product.findAll();
+  const result = await Product.findAll({ where: { name: { [Op.like]: `%${search}%` } } });
   const results = await Product.findAll();
   if (search) {
     return res.send({
